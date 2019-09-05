@@ -3,7 +3,7 @@ export default function(num = 6, letters = 'QWERTYUIOPLKJHGFDSAZXCVBNM1234567890
     let captcha = []
 
     try {
-        captcha = [...Array(num)].map(() => letters[Math.floor(Math.random() * leetters.length)])
+        captcha = [...Array(num)].map(() => letters[Math.floor(Math.random() * letters.length)])
     } catch (e) {
 
     }
@@ -13,6 +13,9 @@ export default function(num = 6, letters = 'QWERTYUIOPLKJHGFDSAZXCVBNM1234567890
     })
 
     captcha = captcha.join('')
+        /* let captcha22 = captcha.join()
+        console.log('captcha22:', captcha22)
+        console.log('captcha2:', captcha) */
 
     return {
         tpl,
